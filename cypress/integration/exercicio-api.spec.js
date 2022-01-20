@@ -33,15 +33,12 @@ describe("Testes da Funcionalidade Usuários", () => {
     );
   });
 
-  it("Deve validar um usuário com email inválido", () => {
-    cy.cadastrarUsuario(
-      "Thiago Andrade",
-      "tcandrade@mailinator.com",
-      "senha@123",
-      "false"
-    ).then((response) => {
+  it.only("Deve validar um usuário com email inválido", () => {
+    let email = `tacandrade ${Math.floor(Math.random() * 100000000)}mailinator`
+
+    cy.cadastrarUsuario("Thiago Andrade", email, "senha@123", "false").then((response) => {
       expect(response.status).to.equal(400);
-      expect(response.body.message).to.equal("Este email já está sendo usado");
+      expect(response.body.email).to.contain("email deve ser um email válido");
     });
   });
 
