@@ -34,9 +34,7 @@ describe("Testes da Funcionalidade Usuários", () => {
   });
 
   it("Deve validar um usuário com email inválido", () => {
-    let email = `tacandrade ${Math.floor(Math.random() * 100000000)}mailinator`
-
-    cy.cadastrarUsuario("Thiago Andrade", email, "senha@123", "false").then((response) => {
+    cy.cadastrarUsuario("Thiago Andrade", "tcandrade*mailinator", "senha@123", "false").then((response) => {
       expect(response.status).to.equal(400);
       expect(response.body.email).to.contain("email deve ser um email válido");
     });
