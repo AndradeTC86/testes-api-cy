@@ -33,7 +33,7 @@ describe("Testes da Funcionalidade Usuários", () => {
     );
   });
 
-  it.only("Deve validar um usuário com email inválido", () => {
+  it("Deve validar um usuário com email inválido", () => {
     let email = `tacandrade ${Math.floor(Math.random() * 100000000)}mailinator`
 
     cy.cadastrarUsuario("Thiago Andrade", email, "senha@123", "false").then((response) => {
