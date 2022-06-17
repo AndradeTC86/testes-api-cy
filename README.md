@@ -1,63 +1,56 @@
-# Testes API - EBAC
-### Exercício para os alunos de Qualidade de software da EBAC 
+# Testes API Cypress
 
-## Clonando e executando em sua máquina
+# Automation API Cypress Test
 
-### Pré-requisito:
+This is the repository for automation of API, developed to work with Cypress.
 
--Node.js - Você encontra em: https://nodejs.org/en/
+## Table of Contents
 
--Visual Studio Code ou qualquer editor de texto - você encontra em: https://code.visualstudio.com/download
+1. [Goal](#goal)
+2. [Project Structure](#project-structure)
+3. [Tests](#tests)
+4. [Initial Setup](#initial-setup)
+5. [Run Tests](#run-tests)
 
--Git: você encontra em: https://git-scm.com/downloads
+## Goal
 
+The goal of this repository is to be easy to understand focused on developing automated tests for API, using [Cypress](https://www.cypress.io/), a tool developed in JavaScript language that provides speed, ease and reliability in the tests.
 
-Via terminal, rode os seguintes comandos:
-```  
-git clone https://github.com/EBAC-QE/testes-api-cy.git
-```
-```
-cd testes-api-cy
-```
-
-#### Para instalar as dependencias:
-```
-npm install 
-```
-
-#### Para subir o servidor:
-```
-npm start
-```
-
-#### Para executar em moodo Headlesss via console:
-```
-npx cypress run
-```
-
-#### Para executar via Dashboard:
-```
-npx cypress open 
-```
-Após abrir o dasboard, clique na opção "Running integration tests" para rodar todos os testes.
-
-#### Para criar o relatório do mocha:
-```
-npm run cy:run
-```
+## Project Structure
 
 ```
-npm run cy:report 
+|--- .github
+|----- workflows
+|--- cypress
+|----- contracts
+|----- fixtures
+|----- integration
+|----- plugins
+|----- support
+|--- cypress.json
+|--- Jenkinsfile
+|--- package-lock.json
+|--- package.json
 ```
 
-### Bibliotecas de apoio:
--Cypress: Framework de automação: https://cypress.io/
+## Tests
 
+The tests were written using the JavaScript language with WebDriverIO.
 
-### Bom exercício ;) 
-Fábio & José Ernesto
-Qualidade de software
+## Run tests
 
+### Initial Setup
 
+1. Requires node. To install, execute `npm install node` or download [Node](https://nodejs.org/en/download/)
+2. Run the command `npm install` to install dependencies
+3. To start the server, execute `npm start`
 
+### Run Tests
 
+- Run one of the commands below to run the tests.
+  Examples:
+- To run the tests, execute `npm run test` or `cy:run`
+- To generate the Mocha reports, execute `npm run cy:report`
+- To run the tests generating the Cypress Dashboard, execute `npm run cy:dashboard`
+- To run the tests in Continuous Integration, execute `npm run cy:run-ci`
+<p>
