@@ -35,7 +35,7 @@ The goal of this repository is to be easy to understand focused on developing au
 
 ## Tests
 
-The tests were written using the JavaScript language with WebDriverIO.
+The tests were written using the JavaScript language with Cypress.
 
 ## Run tests
 
